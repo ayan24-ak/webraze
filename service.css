@@ -1,0 +1,64 @@
+/* ========================= */
+/* SERVICES PAGE */
+/* ========================= */
+
+.page-hero{
+  text-align:center;
+  padding:80px 20px 40px;
+}
+
+.page-hero h1{
+  font-family:'Anton';
+  font-size:clamp(40px,6vw,70px);
+  color:var(--primary);
+}
+
+.page-hero p{
+  margin-top:10px;
+  font-size:18px;
+}
+
+/* SERVICES GRID */
+.services-page{
+  padding:60px 8%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.service-box{
+  background:var(--gray);
+  padding:35px;
+  border-radius:12px;
+  transition:.3s;
+}
+
+.service-box:hover{
+  transform:translateY(-10px);
+  border:1px solid var(--primary);
+}
+
+.service-box h2{
+  font-family:'Anton';
+  margin-bottom:15px;
+}
+
+.service-box ul{
+  margin-top:15px;
+  list-style:none;
+}
+
+.service-box li{
+  margin:8px 0;
+}
+
+/* CTA SECTION */
+.cta{
+  text-align:center;
+  padding:70px 20px;
+}
+
+.cta h2{
+  font-family:'Anton';
+  margin-bottom:20px;
+}

@@ -1,0 +1,80 @@
+/* ========================= */
+/* PORTFOLIO PAGE */
+/* ========================= */
+
+.page-hero{
+  text-align:center;
+  padding:80px 20px 40px;
+}
+
+.page-hero h1{
+  font-family:'Anton';
+  font-size:clamp(40px,6vw,70px);
+  color:var(--primary);
+}
+
+.page-hero p{
+  margin-top:10px;
+  font-size:18px;
+}
+
+.portfolio-grid{
+  padding:60px 8%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* PROJECT CARD */
+.project-card{
+  background:var(--gray);
+  border-radius:12px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-10px);
+  border:1px solid var(--primary);
+}
+
+.project-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+/* INFO */
+.project-info{
+  padding:20px;
+  text-align:center;
+}
+
+.project-info h3{
+  font-family:'Anton';
+  margin-bottom:10px;
+}
+
+.small{
+  padding:10px 20px;
+  font-size:14px;
+  display:inline-block;
+  margin-top:10px;
+}
+
+/* ========================= */
+/* CTA SECTION FIXED SPACING */
+/* ========================= */
+
+.cta{
+  text-align:center;
+  padding:100px 20px;   /* more breathing space */
+  margin-top:60px;      /* distance from portfolio section */
+  background:#0f0f0f;
+}
+
+.cta h2{
+  font-family:'Anton';
+  margin-bottom:30px;   /* space between text and button */
+  font-size:clamp(28px,4vw,40px);
+}

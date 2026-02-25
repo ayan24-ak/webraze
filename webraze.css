@@ -1,0 +1,218 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* VARIABLES */
+:root{
+  --primary:#b6ff00;
+  --dark:#0b0b0b;
+  --gray:#1a1a1a;
+  --white:#ffffff;
+}
+
+/* BODY */
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--dark);
+  color:white;
+  line-height:1.6;
+}
+
+/* NAVBAR */
+/* ========================= */
+/* HEADER + LOGO */
+/* ========================= */
+
+.navbar{
+  display:flex;
+  flex-direction:column;   /* stack logo + nav */
+  align-items:center;
+  justify-content:center;
+  padding:20px 8%;
+  background:black;
+}
+
+/* LOGO */
+.logo{
+  height:140px;          /* bigger logo */
+  width:auto;
+  margin-bottom:15px;
+  object-fit:contain;
+}
+
+/* NAVIGATION */
+nav{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  font-size:18px;
+  position:relative;
+}
+
+/* cool hover underline */
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0%;
+  height:2px;
+  background:var(--primary);
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* HERO */
+.hero{
+  min-height:85vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+}
+
+.hero h1{
+  font-family:'Anton',sans-serif;
+  font-size:clamp(40px,7vw,80px);
+}
+
+.hero span{
+  color:var(--primary);
+}
+
+.hero p{
+  margin:20px 0;
+  max-width:600px;
+}
+
+.btn{
+  background:var(--primary);
+  color:black;
+  padding:14px 28px;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:6px;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* SERVICES */
+.services{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.services h2{
+  font-family:'Anton';
+  font-size:40px;
+  margin-bottom:40px;
+}
+
+.service-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:var(--gray);
+  padding:30px;
+  border-radius:10px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border:1px solid var(--primary);
+}
+
+/* WHY SECTION */
+.why{
+  padding:70px 8%;
+  text-align:center;
+}
+
+.why h2{
+  font-family:'Anton';
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.why ul{
+  list-style:none;
+}
+
+.why li{
+  margin:10px 0;
+  font-size:18px;
+}
+
+/* FOOTER */
+.footer{
+  background:black;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+/* TABLET */
+@media(max-width:900px){
+
+  nav{
+    width:100%;
+    text-align:center;
+    margin-top:10px;
+  }
+
+  nav a{
+    display:inline-block;
+    margin:10px;
+  }
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .logo{
+    height:100px;
+  }
+
+  nav{
+    gap:15px;
+  }
+
+  nav a{
+    font-size:16px;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .services h2,
+  .why h2{
+    font-size:30px;
+  }
+}
